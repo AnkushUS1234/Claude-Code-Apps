@@ -68,3 +68,52 @@ git commit -m "Initial commit"
 gh repo create <repo-name> --public --source=. --remote=origin --push
 ```
 Replace `<repo-name>` with your desired repository name. This creates the repo on GitHub and pushes `main` in one step.
+
+---
+
+## Claude Code: Beginner Commands Reference
+
+### Slash Commands (type these in the Claude Code prompt)
+
+| Command | What it does |
+|---|---|
+| `/help` | Show all available commands and keyboard shortcuts |
+| `/init` | Analyze the project and generate a `CLAUDE.md` documentation file |
+| `/clear` | Clear the conversation history and start fresh |
+| `/config` | Open settings to change theme, model, editor mode, etc. |
+| `/model` | Switch the AI model (Sonnet, Opus, Haiku) |
+| `/review` | Ask Claude to review the current pull request |
+| `/compact` | Summarize the conversation to free up context space |
+| `/memory` | View and edit Claude's persistent memory about you and your projects |
+| `/cost` | Show how many tokens the current conversation has used |
+| `/doctor` | Check that your Claude Code installation is healthy |
+| `/update` | Update Claude Code to the latest version |
+| `/vim` | Toggle Vim keybindings in the input box |
+| `/hooks` | View and manage automation hooks (e.g. run a command after every file edit) |
+
+### Running Shell Commands Directly
+
+Prefix any shell command with `!` to run it without leaving the prompt:
+
+```
+! git status
+! ls
+! npm install
+```
+
+### Keyboard Shortcuts
+
+| Shortcut | Action |
+|---|---|
+| `Enter` | Send message |
+| `Shift+Enter` | New line without sending |
+| `↑` | Edit your last message |
+| `Esc` | Cancel the current Claude response |
+| `Ctrl+C` | Stop Claude mid-response |
+
+### Tips for Beginners
+
+- **Be specific** — instead of "fix this", say "fix the bug in the `resetGame` function where the score resets"
+- **Mention file names** — Claude works faster when you reference the exact file
+- **Use `/clear` often** — long conversations slow Claude down; start fresh for new tasks
+- **Ask Claude to explain** — you can always ask "explain what you just did" after any change
